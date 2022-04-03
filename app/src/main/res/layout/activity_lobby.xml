@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout_lobby"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".lobby.LobbyActivity">
+
+    <TextView
+        android:id="@+id/lobbyOwnerHeader"
+        style="@style/lobby_regular_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="[Login]'s Lobby"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="[Login]'s Lobby" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="38dp"
+        android:background="@drawable/rounded_corners_green"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lobbyOwnerHeader">
+
+        <TextView
+            android:id="@+id/lobbyLocationHeader"
+            style="@style/lobby_regular_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            tools:text="Rynek" />
+
+        <TextView
+            android:id="@+id/lobbyGameTypeHeader"
+            style="@style/lobby_regular_text"
+            android:layout_marginTop="16dp"
+            tools:text="Tryb Gry : Solo" />
+
+        <TextView
+            android:id="@+id/lobbyTeamLabel"
+            style="@style/lobby_regular_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            tools:text="Twoja drużyna : Zieloni" />
+
+        <TextView
+            android:id="@+id/lobbyPlayersCountLabel"
+            style="@style/lobby_regular_text"
+            android:text="@string/lobby_players_count_label" />
+
+        <TextView
+            android:id="@+id/lobbyPlayersCount"
+            style="@style/lobby_regular_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            tools:text="8 / 10" />
+    </LinearLayout>
+
+    <ToggleButton
+        android:id="@+id/lobbyReadyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radio_button_base"
+        android:checked="false"
+        android:text="@string/lobby_ready_button"
+        android:textColor="@color/white"
+        android:textOff="@string/lobby_ready_button"
+        android:textOn="@string/lobby_ready_button"
+        app:layout_constraintBottom_toBottomOf="@+id/lobbyStartButton"
+        app:layout_constraintEnd_toStartOf="@+id/lobbyStartButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lobbyStartButton" />
+
+    <Button
+        android:id="@+id/lobbyStartButton"
+        style="@style/lobby_settings_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/lobby_start_button"
+        android:textColor="@color/white"
+        android:textOff="@string/lobby_ready_button"
+        android:textOn="@string/lobby_ready_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/lobbyReadyButton" />
+
+    <Button
+        android:id="@+id/lobbyTeamChangeButton"
+        style="@style/lobby_settings_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/lobby_team_change_button"
+        app:layout_constraintBottom_toTopOf="@+id/lobbySettingsChangeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/lobbySettingsChangeButton"
+        style="@style/lobby_settings_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="@string/lobby_settings_button"
+        app:layout_constraintBottom_toTopOf="@+id/lobbyReadyButton"
+        app:layout_constraintEnd_toStartOf="@+id/lobbyShowMapButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/lobbyShowMapButton"
+        style="@style/lobby_settings_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="@string/lobby_map_button"
+        app:layout_constraintBottom_toTopOf="@+id/lobbyReadyButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/lobbySettingsChangeButton" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lobbyPlayersList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_corners"
+        android:padding="20dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/lobbyTeamChangeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <ImageView
+        android:id="@+id/lobbyLocationDiode"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:tint="@color/orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/location_diode" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

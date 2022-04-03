@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout_advancedLobbySettings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green_light"
+    tools:context=".create_lobby.AdvancedLobbySettingsFragment">
+
+    <TextView
+        android:id="@+id/webPlayersSpeedLabel"
+        style="@style/lobby_settings_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:text="@string/web_players_speed_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/punishmentLabel"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <LinearLayout
+        android:id="@+id/webPlayersSpeedContainer"
+        style="@style/lobby_setting_suffix_input_container"
+        android:layout_marginTop="@dimen/input_to_label_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/webPlayersSpeedLabel">
+
+        <EditText
+            android:id="@+id/webPlayersSpeedInput"
+            style="@style/lobby_settings_suffix_input"
+            android:text="@string/web_players_speed_default" />
+
+        <TextView
+            android:id="@+id/webPlayersSpeedSuffix"
+            style="@style/lobby_settings_suffix_input_suffix"
+            android:text="@string/speed_suffix" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mobilePlayersSpeedLimitLabel"
+        style="@style/lobby_settings_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="@string/mobile_players_speed_limit_label"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/mobilePlayersSpeedLimitContainer"
+        style="@style/lobby_setting_suffix_input_container"
+        android:layout_marginTop="@dimen/input_to_label_margin"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mobilePlayersSpeedLimitLabel">
+
+        <EditText
+            android:id="@+id/mobilePlayersSpeedLimitInput"
+            style="@style/lobby_settings_suffix_input"
+            android:inputType="numberDecimal"
+            android:text="@string/mobile_players_speed_limit_default" />
+
+        <TextView
+            android:id="@+id/mobilePlayersSpeedLimitSuffix"
+            style="@style/lobby_settings_suffix_input_suffix"
+            android:gravity="center"
+            android:text="@string/speed_suffix" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/numberOfDwarfsLabel"
+        style="@style/lobby_settings_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:text="@string/number_of_dwarfs_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mobilePlayersSpeedLimitLabel" />
+
+    <EditText
+        android:id="@+id/numberOfDwarfsInput"
+        style="@style/lobby_settings_input"
+        android:layout_marginTop="@dimen/input_to_label_margin"
+        android:text="@string/number_of_dwarfs_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberOfDwarfsLabel" />
+
+    <TextView
+        android:id="@+id/punishmentLabel"
+        style="@style/lobby_settings_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:text="@string/punishment_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberOfDwarfsLabel" />
+
+    <EditText
+        android:id="@+id/punishmentInput"
+        style="@style/lobby_settings_input"
+        android:layout_marginTop="@dimen/input_to_label_margin"
+        android:inputType="number"
+        android:text="@string/punishment_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/punishmentLabel" />
+
+    <Button
+        android:id="@+id/goToPreviousPageButton"
+        style="@style/lobby_settings_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/go_back_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/finishButton"
+        style="@style/lobby_settings_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/finish_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

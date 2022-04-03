@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">Dwarf Runner</string>
+    <string name="send">Send</string>
+    <string name="sign_in">Zaloguj się</string>
+    <string name="sign_up">Zarejestruj się</string>
+    <string name="login">Pseudonim</string>
+    <string name="email">E-mail</string>
+    <string name="password">Hasło</string>
+    <string name="confirm_password">Potwierdź hasło</string>
+    <string name="join_game">Dołącz do gry</string>
+    <string name="new_game">Załóż nową grę</string>
+    <string name="settings">Ustawienia</string>
+    <string name="sign_out">Wyloguj</string>
+
+    <!--  LOBBY SETTINGS LABELS -->
+    <string name="game_type_label">Tryb Gry</string>
+    <string name="player_count_label">Liczba Graczy</string>
+    <string name="location_label">Miejsce Rozgrywki</string>
+    <string name="end_condition_label">Koniec Gry</string>
+    <string name="web_players_speed_label">Prędkość graczy webowych</string>
+    <string name="mobile_players_speed_limit_label">Maks. prędkość graczy mobilnych</string>
+    <string name="number_of_dwarfs_label">Liczba Krasnali</string>
+    <string name="punishment_label">Kara za wyjście poza ścieżkę</string>
+
+    <!--  LOBBY SETTINGS DEFAULT VALUES -->
+    <string name="player_count_default">8</string>
+    <string name="web_players_speed_default">6</string>
+    <string name="mobile_players_speed_limit_default">10</string>
+    <string name="number_of_dwarfs_default">10</string>
+    <string name="punishment_default">10</string>
+
+    <!--  LOBBY SETTINGS BUTTONS -->
+    <string name="game_type_solo_button">Solo</string>
+    <string name="game_type_team_button">Drużynowy</string>
+    <string name="end_condition_time_button">Koniec Czasu</string>
+    <string name="end_condition_dwarfs_button">Brak Krasnali</string>
+    <string name="go_back_button">Wróć</string>
+    <string name="go_next_button">Dalej</string>
+    <string name="finish_button">Zakończ</string>
+
+    <!--  LOBBY  -->
+    <string name="lobby_players_count_label">Oczekiwanie na pozostałych graczy:</string>
+
+    <string name="lobby_ready_button">Gotowy?</string>
+    <string name="lobby_team_change_button">Zmień Drużynę</string>
+    <string name="lobby_settings_button">Ustawienia</string>
+
+    <!--  OTHERS  -->
+    <string name="speed_suffix">km/h</string>
+
+
+    <!--  ARRAYS  -->
+    <array name="locations">
+        <item>Rynek</item>
+        <item>Hala Stulecia</item>
+        <item>Dworzec Główny PKP</item>
+        <item>Park Zachodni</item>
+        <item>PWr - Kampus Główny</item>
+        <item>PWr - W. Architektury</item>
+        <item>Ostrów Tumski</item>
+        <item>Park Szczytnicki</item>
+    </array>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="time_limit_suffix">min</string>
+    <string name="game_end_time_limit_default">10</string>
+    <string name="lobby_start_button">Start</string>
+    <string name="lobby_map_button">Mapa</string>
+</resources>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout_basicLobbySettings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green_light"
+    tools:context=".create_lobby.BasicLobbySettingsFragment">
+
+    <TextView
+        android:id="@+id/GameTypeLabel"
+        style="@style/lobby_settings_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="@string/game_type_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <RadioGroup
+        android:id="@+id/gameTypeRadioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/input_to_label_margin"
+        android:checkedButton="@id/gameTypeSoloButton"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GameTypeLabel">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/gameTypeSoloButton"
+            style="@style/lobby_settings_radio_button"
+            android:checked="false"
+            android:text="@string/game_type_solo_button"
+            tools:layout_conversion_absoluteHeight="48dp"
+            tools:layout_conversion_absoluteWidth="48dp"
+            tools:layout_editor_absoluteX="142dp"
+            tools:layout_editor_absoluteY="59dp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/gameTypeTeamButton"
+            style="@style/lobby_settings_radio_button"
+            android:gravity="center"
+            android:text="@string/game_type_team_button"
+            tools:layout_conversion_absoluteHeight="48dp"
+            tools:layout_conversion_absoluteWidth="78dp"
+            tools:layout_editor_absoluteX="190dp"
+            tools:layout_editor_absoluteY="59dp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/playerCountLabel"
+        style="@style/lobby_settings_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:text="@string/player_count_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GameTypeLabel" />
+
+    <EditText
+        android:id="@+id/playerCountInput"
+        style="@style/lobby_settings_input"
+        android:layout_marginTop="@dimen/input_to_label_margin"
+        android:inputType="number"
+        android:text="@string/player_count_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerCountLabel" />
+
+    <TextView
+        android:id="@+id/locationLabel"
+        style="@style/lobby_settings_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:text="@string/location_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerCountLabel" />
+
+    <Spinner
+        android:id="@+id/locationSpinner"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="@dimen/input_to_label_margin"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/green_dark"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationLabel" />
+
+    <RadioGroup
+        android:id="@+id/endConditionRadioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/input_to_label_margin"
+        android:checkedButton="@id/endConditionTime"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/endConditionLabel">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/endConditionTime"
+            style="@style/lobby_settings_radio_button"
+            android:text="@string/end_condition_time_button" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/endConditionDwarfs"
+            style="@style/lobby_settings_radio_button"
+            android:text="@string/end_condition_dwarfs_button" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/endConditionLabel"
+        style="@style/lobby_settings_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:text="@string/end_condition_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationLabel"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <LinearLayout
+        android:id="@+id/gameEndConditionTimeContainer"
+        style="@style/lobby_setting_suffix_input_container"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/endConditionRadioGroup">
+
+        <EditText
+            android:id="@+id/gameEndTimeInput"
+            style="@style/lobby_settings_suffix_input"
+            android:text="@string/game_end_time_limit_default" />
+
+        <TextView
+            android:id="@+id/gameEndTimeSuffix"
+            style="@style/lobby_settings_suffix_input_suffix"
+            android:layout_weight="0.4"
+            android:text="@string/time_limit_suffix" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/goToNextPageButton"
+        style="@style/lobby_settings_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/go_next_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        tools:layout_editor_absoluteX="183dp"
+        tools:layout_editor_absoluteY="72dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

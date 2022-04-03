@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/loginDeck"
+        layout="@layout/login_deck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/soloButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corners_green"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/solo"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/teamButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/rounded_corners_green"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/team"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/locateButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corners_green"
+            android:scaleType="fitCenter"
+            app:srcCompat="@android:drawable/ic_menu_mylocation"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_corners"
+        android:padding="20dp" />
+</LinearLayout>

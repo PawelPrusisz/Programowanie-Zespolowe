@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_corners"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/ic_x_button_2_foreground" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/Settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ustawienia Gry"
+        android:textAllCaps="true"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+
+        android:layout_marginBottom="10dp"
+        />
+
+    <TextView
+        android:id="@+id/gameEndRule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Warunek końca gry:"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/gameEndRuleButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners_green"
+            android:text="Brak Krasnali"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/numberOfDwarfs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Liczba krasnali:"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/numberOfDwarfsbutton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners_green"
+            android:text="20"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/maxwebplayerspeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Maksymalna prędkość graczy webowych:"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/maxwebplayerspeedbutton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners_green"
+            android:text="6 km/h"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/maxmobileplayerspeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Maksymalna prędkość graczy mobilnych:"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/maxmobileplayerspeedbutton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners_green"
+            android:text="12 km/h"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+</LinearLayout>

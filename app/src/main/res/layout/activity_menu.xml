@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context=".MenuActivity">
+
+    <include
+        android:id="@+id/loginDeck"
+        layout="@layout/login_deck" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <include
+        android:id="@+id/buttonJoinGame"
+        android:text="@string/join_game"
+        layout="@layout/rounded_centered_button" />
+
+    <include
+        android:id="@+id/buttonNewGame"
+        android:text="@string/new_game"
+        layout="@layout/rounded_centered_button" />
+
+    <include
+        android:id="@+id/buttonSettings"
+        android:text="@string/settings"
+        layout="@layout/rounded_centered_button" />
+
+    <include
+        android:id="@+id/buttonSignOut"
+        android:text="@string/sign_out"
+        layout="@layout/rounded_centered_button" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/testButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="(TEST) Do aktywności z grą" />
+
+</LinearLayout>
